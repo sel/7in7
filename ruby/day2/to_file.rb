@@ -21,4 +21,18 @@ class Person
     end
 end
 
+class Cat
+    include ToFile
+    attr_accessor :breed
+
+    def initialize(breed)
+        @breed = breed
+    end
+
+    def to_s
+        "#{breed} cat"
+    end
+end
+
 Person.new('Matz').to_f
+Cat.new('Tabby').to_f
